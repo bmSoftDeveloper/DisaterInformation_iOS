@@ -56,6 +56,11 @@ static NSString *meCellIde = @"meCell";
     }
     cell.textLabel.text = self.nameArray[indexPath.row];
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    if (indexPath.row == self.nameArray.count - 1){
+    
+    cell.detailTextLabel.text = @"v1.0";
+    }
+    
     return cell;
 }
 
@@ -68,9 +73,7 @@ static NSString *meCellIde = @"meCell";
 -(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
     UIView *headView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, DEVICE_WIDTH, GMLAYOUTRATE(150))];
-
     headView.backgroundColor = [UIColor orangeColor];
-    
     return headView;
 }
 

@@ -24,6 +24,7 @@
     CustomNaviViewController *na = [[CustomNaviViewController alloc]initWithRootViewController:hvc ];
     self.window.rootViewController = na;
     [self.window makeKeyAndVisible];
+    // addMessage
     
     return YES;
 }
